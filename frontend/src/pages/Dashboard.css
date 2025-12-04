@@ -1,0 +1,352 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard__header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dashboard__title {
+  font-size: 2rem;
+  color: var(--color-text);
+}
+
+.dashboard__content {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: var(--spacing-xl);
+}
+
+.dashboard__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.dashboard__section .section-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+  text-align: left;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.goal-card {
+  padding: var(--spacing-md);
+}
+
+.goal-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.goal-card__icon {
+  font-size: 1.25rem;
+}
+
+.goal-card__title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+.goal-card__stats {
+  margin-bottom: var(--spacing-sm);
+}
+
+.goal-card__current {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.goal-card__target {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.goal-card__extra {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+.goal-card__sleep-time {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Sleep Indicator */
+.sleep-indicator {
+  display: flex;
+  gap: 3px;
+  margin-top: var(--spacing-sm);
+}
+
+.sleep-block {
+  width: 24px;
+  height: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--color-border-light);
+  transition: background var(--transition-fast);
+}
+
+.sleep-block--filled {
+  background: var(--progress-sleep);
+}
+
+/* Reminders */
+.reminders-card {
+  padding: var(--spacing-md);
+}
+
+.reminders-list {
+  list-style: none;
+}
+
+.reminder-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.reminder-item:last-child {
+  border-bottom: none;
+}
+
+.reminder-item__icon {
+  font-size: 1.25rem;
+}
+
+.reminder-item__text {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+}
+
+.no-reminders {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Health Tip Card */
+.health-tip-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+
+.health-tip-card__icon {
+  font-size: 1.5rem;
+}
+
+.health-tip-card__content {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Sidebar Summary */
+.dashboard__sidebar {
+  position: sticky;
+  top: var(--spacing-xl);
+  height: fit-content;
+}
+
+.summary-card {
+  padding: var(--spacing-lg);
+}
+
+.summary-card__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.summary-item {
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.summary-item__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+}
+
+.summary-item__icon {
+  font-size: 1rem;
+}
+
+.summary-item__label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.summary-item__value {
+  margin-bottom: var(--spacing-sm);
+}
+
+.summary-item__value strong {
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.summary-item__target {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.summary-item__meta {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+/* Mini Chart */
+.summary-item__chart {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-md);
+  margin: var(--spacing-sm) 0;
+}
+
+.mini-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 40px;
+  flex: 1;
+}
+
+.mini-chart__bar {
+  flex: 1;
+  background: var(--color-border);
+  border-radius: 2px;
+  min-height: 4px;
+}
+
+.mini-chart__bar:last-child {
+  background: var(--progress-steps);
+}
+
+.mini-chart__label {
+  font-size: 0.625rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Loading State */
+.dashboard-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+/* Error State */
+.dashboard__error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: var(--spacing-xl);
+  color: var(--color-text-light);
+}
+
+.no-data {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  padding: var(--spacing-md);
+}
+
+/* Goal Card Input */
+.goal-card__log {
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.goal-card__input {
+  flex: 1;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  background: var(--color-bg);
+}
+
+.goal-card__input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.goal-card__input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.goal-card__progress-text {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin-top: var(--spacing-xs);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard__content {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard__sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,64 @@
+.progress-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.progress-bar__track {
+  flex: 1;
+  background: var(--color-border-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-bar--small .progress-bar__track {
+  height: 4px;
+}
+
+.progress-bar--medium .progress-bar__track {
+  height: 8px;
+}
+
+.progress-bar--large .progress-bar__track {
+  height: 12px;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--transition-normal);
+}
+
+.progress-bar__fill--primary {
+  background: var(--color-accent);
+}
+
+.progress-bar__fill--steps {
+  background: var(--progress-steps);
+}
+
+.progress-bar__fill--active {
+  background: var(--progress-active);
+}
+
+.progress-bar__fill--sleep {
+  background: var(--progress-sleep);
+}
+
+.progress-bar__fill--success {
+  background: var(--color-success);
+}
+
+.progress-bar__fill--warning {
+  background: var(--color-warning);
+}
+
+.progress-bar__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+  min-width: 36px;
+  text-align: right;
+}
+

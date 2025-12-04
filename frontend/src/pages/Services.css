@@ -1,0 +1,226 @@
+.services-page {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.services-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-hero__title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.services-hero__subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Section Headings */
+.section-heading {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2.25rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-subheading {
+  text-align: center;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: 1.125rem;
+}
+
+/* Services Section */
+.services-section {
+  padding: 4rem 2rem;
+  background: var(--color-bg);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.service-card {
+  padding: var(--spacing-xl);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card__icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.service-card__description {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.service-card__features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xs);
+}
+
+.service-card__features li {
+  font-size: 0.875rem;
+  color: var(--color-text);
+  padding: var(--spacing-xs) 0;
+}
+
+/* Providers Section */
+.providers-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.provider-card {
+  padding: var(--spacing-xl);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.provider-card:hover {
+  transform: translateY(-5px);
+}
+
+.provider-card__image {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.provider-card__name {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.provider-card__specialty {
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.provider-card__experience {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.provider-card__rating {
+  font-size: 0.875rem;
+  color: var(--color-warning);
+  font-weight: 600;
+}
+
+/* CTA Section */
+.services-cta {
+  background: linear-gradient(135deg, var(--color-accent) 0%, #3d7a8c 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.services-cta__title {
+  font-family: 'Instrument Serif', serif;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: var(--spacing-md);
+}
+
+.services-cta__text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-cta__buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-hero__title {
+    font-size: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .service-card__features {
+    grid-template-columns: 1fr;
+  }
+  
+  .providers-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .providers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

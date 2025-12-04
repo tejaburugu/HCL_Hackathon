@@ -1,0 +1,222 @@
+.goals-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.goals-page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.goals-page__title {
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+}
+
+.goals-page__subtitle {
+  color: var(--color-text-light);
+}
+
+/* Goal Form */
+.goal-form-card {
+  margin-bottom: var(--spacing-xl);
+}
+
+.goal-form__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.goal-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.goal-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+/* Recurring Checkbox */
+.goal-form__row--checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--color-accent);
+}
+
+.checkbox-hint {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Goals List */
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.goal-item {
+  padding: var(--spacing-lg);
+}
+
+.goal-item__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.goal-item__icon {
+  font-size: 1.5rem;
+  padding: var(--spacing-sm);
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+}
+
+.goal-item__info {
+  flex: 1;
+}
+
+.goal-item__title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.goal-item__recurring-badge {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.goal-item__date {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.goal-item__header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.goal-item__badge {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--color-success);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.goal-item__edit-btn,
+.goal-item__delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  opacity: 0.6;
+}
+
+.goal-item__edit-btn:hover,
+.goal-item__delete-btn:hover {
+  opacity: 1;
+  background: var(--color-bg);
+}
+
+.goal-item__delete-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.goal-item__progress {
+  margin-bottom: var(--spacing-md);
+}
+
+.goal-item__values {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.goal-item__current {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.goal-item__target {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.goal-item__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.goal-item__input {
+  max-width: 150px;
+}
+
+.no-goals {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-light);
+}
+
+@media (max-width: 768px) {
+  .goals-page__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .goal-form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
